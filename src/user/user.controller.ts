@@ -4,8 +4,8 @@ import { CreateUserDto } from '@app/user/dto/createUser.dto'
 import { LoginUserDto } from '@app/user/dto/login.dto'
 import { UserResponseInterface } from '@app/user/types/userResponse.interface'
 import { User } from '@app/user/decorators/user.decorator'
-import { UserEntity } from "@app/user/user.entity";
-import { AuthGuard } from "@app/user/guards/auth.guard";
+import { UserEntity } from '@app/user/user.entity'
+import { AuthGuard } from '@app/user/guards/auth.guard'
 
 @Controller()
 export class UserController {

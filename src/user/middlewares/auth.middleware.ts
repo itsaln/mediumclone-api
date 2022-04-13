@@ -1,9 +1,9 @@
-import { Injectable, NestMiddleware } from "@nestjs/common";
-import { NextFunction, Response } from "express";
-import { ExpressRequestInterface } from "@app/types/expressRequest.interface";
-import { verify } from "jsonwebtoken";
-import { JWT_SECRET } from "@app/config";
-import { UserService } from "@app/user/user.service";
+import { Injectable, NestMiddleware } from '@nestjs/common'
+import { NextFunction, Response } from 'express'
+import { ExpressRequestInterface } from '@app/types/expressRequest.interface'
+import { verify } from 'jsonwebtoken'
+import { JWT_SECRET } from '@app/config'
+import { UserService } from '@app/user/user.service'
 
 @Injectable()
 export class AuthMiddleware implements NestMiddleware {

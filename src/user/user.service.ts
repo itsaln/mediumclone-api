@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm'
 import { sign } from 'jsonwebtoken'
 import { JWT_SECRET } from '@app/config'
 import { Repository } from 'typeorm'
-import { compare } from 'bcrypt'
+import { genSalt } from 'bcryptjs'
 import { CreateUserDto } from '@app/user/dto/createUser.dto'
 import { UserEntity } from '@app/user/user.entity'
 import { UserResponseInterface } from '@app/user/types/userResponse.interface'
@@ -38,14 +38,14 @@ export class UserService {
       throw new HttpException('Credentials are not valid', HttpStatus.UNPROCESSABLE_ENTITY)
     }
 
-    // const isPasswordCorrect = await compare(loginUserDto.password, user.password)
+    // const isPasswordCorrect = await genSalt(loginUserDto.password, user.password)
     const isPasswordCorrect = loginUserDto.password === user.password
 
     if (!isPasswordCorrect) {
       throw new HttpException('Credentials are not valid', HttpStatus.UNPROCESSABLE_ENTITY)
     }
 
-    delete user.password
+    // delete user.password
     return user
   }
 
