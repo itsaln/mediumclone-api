@@ -37,7 +37,6 @@ export class UserController {
     @User() user: UserEntity,
     @User('id') currentUserId: number
   ): Promise<UserResponseInterface> {
-    console.log('userId', currentUserId)
     return this.userService.buildUserResponse(user)
   }
 
