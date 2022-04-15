@@ -57,7 +57,7 @@ export class ArticleController {
     @User('id') currentUserId: number,
     @Param('slug') slug: string
   ) {
-    return  await this.articleService.deleteArticle(slug, currentUserId)
+    return await this.articleService.deleteArticle(slug, currentUserId)
   }
 
   @Post(':slug/favorite')
