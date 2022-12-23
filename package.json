@@ -1,8 +1,12 @@
 {
-  "name": "mediumclone_nestjs",
+  "name": "mediumclone-api",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": {
+    "email": "itsaln23@gmail.com",
+    "name": "Aladin itsaln.web.app",
+    "url": "https://itsaln.web.app"
+  },
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
